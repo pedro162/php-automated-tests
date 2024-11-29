@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    container_name: alura_test_studies
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 9000:80
+    volumes:
+      - .:/var/www/html/alura_test_studies
+    environment:
+      UID: ${UID:-1001}
+      GID: ${GID:-1001}
+    
+
